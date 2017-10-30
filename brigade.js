@@ -5,6 +5,11 @@ const helmTag = "v2.7.0"
 
 events.on("push", () => {
   console.log(" **** I'm a GitHub 'push' handler")
+  var job = new Job("build", "docker:dind")
+  job.tasks = [
+    "make build",
+  ]
+  job.run()
 })
 
 events.on("imagePush", (e, p) => {

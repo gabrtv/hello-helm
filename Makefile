@@ -1,5 +1,5 @@
 VERSION ?= latest
-REGISTRY ?= osseu.azurecr.io
+REGISTRY ?= gabrtv.azurecr.io
 
 .PHONY: build
 build: docker-build

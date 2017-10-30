@@ -17,11 +17,11 @@ events.on("imagePush", (e, p) => {
     return
   }
 
-  var version = docker.target.tag || "latest"
-  if (version == "latest") {
-    console.log("ignoring 'latest'")
-    return
-  }
+  // var version = docker.target.tag || "latest"
+  // if (version == "latest") {
+  //   console.log("ignoring 'latest'")
+  //   return
+  // }
 
   var helm = new Job("helm", "lachlanevenson/k8s-helm:" + helmTag)
   helm.storage.enabled = false
